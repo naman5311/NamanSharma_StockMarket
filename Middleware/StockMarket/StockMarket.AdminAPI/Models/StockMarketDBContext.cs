@@ -128,12 +128,10 @@ namespace StockMarket.AdminAPI.Models
 
             modelBuilder.Entity<StockExchange>(entity =>
             {
-                entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Brief)
-                    .HasMaxLength(50)
+                    .HasMaxLength(100)
                     .IsUnicode(false);
 
                 entity.Property(e => e.ContactAddress)
@@ -141,20 +139,26 @@ namespace StockMarket.AdminAPI.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Remarks)
-                    .HasMaxLength(50)
+                    .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.Property(e => e.StockExchange1).HasColumnName("StockExchange");
+                entity.Property(e => e.StockExchangeName)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<StockPrice>(entity =>
             {
-                entity.HasKey(e => e.CompanyName)
-                    .HasName("PK__StockPri__9BCE05DD86800A41");
+                entity.HasKey(e => e.StockId)
+                    .HasName("PK__StockPri__CBAD87635A89BF74");
+
+                entity.Property(e => e.StockId).HasColumnName("stockId");
 
                 entity.Property(e => e.CompanyName)
                     .HasMaxLength(50)
                     .IsUnicode(false);
+
+                entity.Property(e => e.CurrentPrice).HasColumnType("decimal(10, 2)");
 
                 entity.Property(e => e.Date).HasColumnType("date");
 
