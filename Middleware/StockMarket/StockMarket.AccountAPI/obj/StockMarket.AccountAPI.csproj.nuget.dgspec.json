@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Naman\\source\\repos\\StockMarket\\StockMarket.AccountAPI\\StockMarket.AccountAPI.csproj": {}
+    "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarket.AccountAPI\\StockMarket.AccountAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Naman\\source\\repos\\StockMarket\\StockMarket.AccountAPI\\StockMarket.AccountAPI.csproj": {
+    "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarket.AccountAPI\\StockMarket.AccountAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Naman\\source\\repos\\StockMarket\\StockMarket.AccountAPI\\StockMarket.AccountAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarket.AccountAPI\\StockMarket.AccountAPI.csproj",
         "projectName": "StockMarket.AccountAPI",
-        "projectPath": "C:\\Users\\Naman\\source\\repos\\StockMarket\\StockMarket.AccountAPI\\StockMarket.AccountAPI.csproj",
+        "projectPath": "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarket.AccountAPI\\StockMarket.AccountAPI.csproj",
         "packagesPath": "C:\\Users\\Naman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Naman\\source\\repos\\StockMarket\\StockMarket.AccountAPI\\obj\\",
+        "outputPath": "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarket.AccountAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Naman\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -47,6 +51,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.5.1, )"
             }
           },
           "imports": [

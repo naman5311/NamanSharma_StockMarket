@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Naman\\source\\repos\\StockMarket\\StockMarket.AdminAPI\\StockMarket.AdminAPI.csproj": {}
+    "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarket.AdminAPI\\StockMarket.AdminAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Naman\\source\\repos\\StockMarket\\StockMarket.AdminAPI\\StockMarket.AdminAPI.csproj": {
+    "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarket.AdminAPI\\StockMarket.AdminAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Naman\\source\\repos\\StockMarket\\StockMarket.AdminAPI\\StockMarket.AdminAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarket.AdminAPI\\StockMarket.AdminAPI.csproj",
         "projectName": "StockMarket.AdminAPI",
-        "projectPath": "C:\\Users\\Naman\\source\\repos\\StockMarket\\StockMarket.AdminAPI\\StockMarket.AdminAPI.csproj",
+        "projectPath": "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarket.AdminAPI\\StockMarket.AdminAPI.csproj",
         "packagesPath": "C:\\Users\\Naman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Naman\\source\\repos\\StockMarket\\StockMarket.AdminAPI\\obj\\",
+        "outputPath": "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarket.AdminAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Naman\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,26 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.5.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

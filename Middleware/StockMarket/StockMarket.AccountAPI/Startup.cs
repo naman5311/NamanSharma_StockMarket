@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using StockMarket.AccountAPI.Repositories;
 
 namespace StockMarket.AccountAPI
@@ -25,7 +26,22 @@ namespace StockMarket.AccountAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IUserRepository,UserRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            //enable swagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Stock Market", Version = "v1" });
+            });
+            //enable cors
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options =>
+                options.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                );
+            });
+
             services.AddControllers();
         }
 
@@ -38,6 +54,14 @@ namespace StockMarket.AccountAPI
             }
 
             app.UseRouting();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Stock Market V1");
+            });
+
+            app.UseCors("AllowOrigin");
 
             app.UseAuthorization();
 

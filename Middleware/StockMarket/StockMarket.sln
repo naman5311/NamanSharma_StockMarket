@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket.AdminAPI", "StockMarket.AdminAPI\StockMarket.AdminAPI.csproj", "{E110BB31-BC3E-475B-9E50-AD1B87301EB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarket.AdminAPI", "StockMarket.AdminAPI\StockMarket.AdminAPI.csproj", "{E110BB31-BC3E-475B-9E50-AD1B87301EB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket.AccountAPI", "StockMarket.AccountAPI\StockMarket.AccountAPI.csproj", "{19F87F51-51DA-467A-B175-D6E7D576F5D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarket.AccountAPI", "StockMarket.AccountAPI\StockMarket.AccountAPI.csproj", "{19F87F51-51DA-467A-B175-D6E7D576F5D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket.Gateway", "StockMarket.Gateway\StockMarket.Gateway.csproj", "{EDA11AB2-692F-48BE-ABD8-4885A08DB2DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarket.UserAPI", "StockMarket.UserAPI\StockMarket.UserAPI.csproj", "{09ED7A72-977D-4489-817B-1CACEC154AE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket.UserAPI", "StockMarket.UserAPI\StockMarket.UserAPI.csproj", "{09ED7A72-977D-4489-817B-1CACEC154AE1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket.Gateway", "StockMarket.Gateway\StockMarket.Gateway.csproj", "{DA135978-A898-471F-BBD0-AB7FAFE23364}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{19F87F51-51DA-467A-B175-D6E7D576F5D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F87F51-51DA-467A-B175-D6E7D576F5D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19F87F51-51DA-467A-B175-D6E7D576F5D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EDA11AB2-692F-48BE-ABD8-4885A08DB2DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDA11AB2-692F-48BE-ABD8-4885A08DB2DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDA11AB2-692F-48BE-ABD8-4885A08DB2DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDA11AB2-692F-48BE-ABD8-4885A08DB2DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09ED7A72-977D-4489-817B-1CACEC154AE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09ED7A72-977D-4489-817B-1CACEC154AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09ED7A72-977D-4489-817B-1CACEC154AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09ED7A72-977D-4489-817B-1CACEC154AE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA135978-A898-471F-BBD0-AB7FAFE23364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA135978-A898-471F-BBD0-AB7FAFE23364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA135978-A898-471F-BBD0-AB7FAFE23364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA135978-A898-471F-BBD0-AB7FAFE23364}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

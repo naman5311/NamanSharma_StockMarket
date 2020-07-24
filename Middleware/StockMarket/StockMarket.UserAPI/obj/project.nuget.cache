@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "7K3GSJvtToJJ/sUuWy4U86O57hamp9V2zSSSQltb56AZ7IIsiMuVPxsIOg6H5NeHbNqWvmpvjbzX4jbvj13jDA==",
+  "dgSpecHash": "YMrFJRDcA/s9p7AvjiwmgTDGu5DX+rNZhrgsusUQE2EOOXxSV9LmfqHYQwfvidGl5i00lvWIUQFFigxE+Pntkw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Naman\\source\\repos\\StockMarket\\StockMarket.UserAPI\\StockMarket.UserAPI.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarket.UserAPI\\StockMarket.UserAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Naman\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Naman\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
+    "C:\\Users\\Naman\\.nuget\\packages\\swashbuckle.aspnetcore\\5.5.1\\swashbuckle.aspnetcore.5.5.1.nupkg.sha512",
+    "C:\\Users\\Naman\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.5.1\\swashbuckle.aspnetcore.swagger.5.5.1.nupkg.sha512",
+    "C:\\Users\\Naman\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.5.1\\swashbuckle.aspnetcore.swaggergen.5.5.1.nupkg.sha512",
+    "C:\\Users\\Naman\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.5.1\\swashbuckle.aspnetcore.swaggerui.5.5.1.nupkg.sha512"
+  ],
   "logs": []
 }
