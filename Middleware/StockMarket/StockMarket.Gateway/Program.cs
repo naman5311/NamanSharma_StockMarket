@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace StockMarket.Gateway
+namespace GateWay
 {
     public class Program
     {
@@ -27,6 +27,5 @@ namespace StockMarket.Gateway
                     });
                     webBuilder.UseStartup<Startup>();
                 });
-
     }
 }

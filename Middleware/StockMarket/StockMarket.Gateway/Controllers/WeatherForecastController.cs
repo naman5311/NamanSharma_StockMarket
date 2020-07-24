@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace StockMarket.Gateway.Controllers
+namespace GateWay.Controllers
 {
     [ApiController]
     [Route("[controller]")]

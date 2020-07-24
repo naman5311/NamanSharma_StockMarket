@@ -1,6 +1,6 @@
 using System;
 
-namespace StockMarket.Gateway
+namespace GateWay
 {
     public class WeatherForecast
     {

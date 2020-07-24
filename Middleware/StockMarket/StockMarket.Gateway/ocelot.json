@@ -1,56 +1,69 @@
 {
-  "ReRoutes": [
-    //AccountAPI
-    {
-      "DownstreamPathTemplate": "/api/User/{catchAll}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5001
-        }
-      ],
-      "UpstreamPathTemplate": "/User/{catchAll}"
-    },
-    {
-      "DownstreamPathTemplate": "/api/Company/{catchAll}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5001
-        }
-      ],
-      "UpstreamPathTemplate": "/Company/{catchAll}"
-    },
+	"ReRoutes": [
+		//Account
+		{
+			"DownstreamPathTemplate": "/api/User/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 5001
+				}
+			],
+			"UpstreamPathTemplate": "/User/{catchAll}"
 
-    //Admin
-    {
-      "DownstreamPathTemplate": "/api/WeatherForecast/{catchAll}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5002
-        }
-      ],
-      "UpstreamPathTemplate": "/WeatherForecast/{catchAll}"
-    },
-    //User
-    {
-      "DownstreamPathTemplate": "/api/WeatherForecast/{catchAll}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5003
-        }
-      ],
-      "UpstreamPathTemplate": "Admin/WeatherForecast/{catchAll}"
-    }
-  ],
-  "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5000"
-  }
+		},
+		// Admin
+		{
+			"DownstreamPathTemplate": "/api/Company/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 5002
+				}
+			],
+			"UpstreamPathTemplate": "/Company/{catchAll}"
 
+		},
+		{
+			"DownstreamPathTemplate": "/api/Ipo/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 5002
+				}
+			],
+			"UpstreamPathTemplate": "/Ipo/{catchAll}"
+
+		},
+		{
+			"DownstreamPathTemplate": "/api/StockExchange/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 5002
+				}
+			],
+			"UpstreamPathTemplate": "/StockExchange/{catchAll}"
+
+		},
+		{
+			"DownstreamPathTemplate": "/api/StockPrice/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 5002
+				}
+			],
+			"UpstreamPathTemplate": "/StockPrice/{catchAll}"
+
+		}
+	],
+	"GlobalConfiguration": {
+		"BaseUrl": "http://localhost:5000"
+	}
 }

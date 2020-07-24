@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarket.AccountAPI", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarket.UserAPI", "StockMarket.UserAPI\StockMarket.UserAPI.csproj", "{09ED7A72-977D-4489-817B-1CACEC154AE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket.Gateway", "StockMarket.Gateway\StockMarket.Gateway.csproj", "{DA135978-A898-471F-BBD0-AB7FAFE23364}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarket.GateWay", "StockMarket.Gateway\StockMarket.GateWay.csproj", "{AC62ECEE-686D-4AF2-8796-BCFB62538D9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{09ED7A72-977D-4489-817B-1CACEC154AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09ED7A72-977D-4489-817B-1CACEC154AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09ED7A72-977D-4489-817B-1CACEC154AE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA135978-A898-471F-BBD0-AB7FAFE23364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA135978-A898-471F-BBD0-AB7FAFE23364}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA135978-A898-471F-BBD0-AB7FAFE23364}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA135978-A898-471F-BBD0-AB7FAFE23364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC62ECEE-686D-4AF2-8796-BCFB62538D9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC62ECEE-686D-4AF2-8796-BCFB62538D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC62ECEE-686D-4AF2-8796-BCFB62538D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC62ECEE-686D-4AF2-8796-BCFB62538D9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
