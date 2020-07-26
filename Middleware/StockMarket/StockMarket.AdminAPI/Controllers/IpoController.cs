@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StockMarket.AdminAPI.Models;
 using StockMarket.AdminAPI.Services;
@@ -12,6 +13,7 @@ namespace StockMarket.AdminAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize()]
     public class IpoController : ControllerBase
     {
         IpoService ipoService = new IpoService();
