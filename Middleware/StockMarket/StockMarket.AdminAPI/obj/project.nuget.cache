@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gi+uPGREIoTc8iymayxYFINIwdiiak55TmWdeiqRIlGyR7+W+l00UiJvsW+qOrXpq3o+kXfWj1i/et/iTXL83Q==",
+  "dgSpecHash": "UqGPyl4EdMieYooof96+vz32dc/UCimasB0mNGAbKaOOdh9R7axZc/JBsBvJ8vQLJi3YQqmTSn/dnacgSFpocQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarket.AdminAPI\\StockMarket.AdminAPI.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\Naman\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.6\\microsoft.entityframeworkcore.design.3.1.6.nupkg.sha512",
     "C:\\Users\\Naman\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.6\\microsoft.entityframeworkcore.relational.3.1.6.nupkg.sha512",
     "C:\\Users\\Naman\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.6\\microsoft.entityframeworkcore.sqlserver.3.1.6.nupkg.sha512",
+    "C:\\Users\\Naman\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.6\\microsoft.entityframeworkcore.tools.3.1.6.nupkg.sha512",
     "C:\\Users\\Naman\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Naman\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.6\\microsoft.extensions.caching.abstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\Naman\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.6\\microsoft.extensions.caching.memory.3.1.6.nupkg.sha512",

@@ -15,7 +15,7 @@ namespace StockMarket.AccountAPI.Models
         {
         }
 
-        public virtual DbSet<Company> Company { get; set; }
+        //public virtual DbSet<Company> Company { get; set; }
         public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -29,53 +29,7 @@ namespace StockMarket.AccountAPI.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Company>(entity =>
-            {
-                entity.HasKey(e => e.CompanyName)
-                    .HasName("PK__Company__9BCE05DDFA6D4768");
-
-                entity.Property(e => e.CompanyName)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.BoardOfDirectors)
-                    .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Brief)
-                    .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Ceo)
-                    .IsRequired()
-                    .HasColumnName("CEO")
-                    .HasMaxLength(30)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.ListedInSe)
-                    .IsRequired()
-                    .HasColumnName("ListedInSE")
-                    .HasMaxLength(10)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Sector)
-                    .IsRequired()
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.StockCode)
-                    .IsRequired()
-                    .HasMaxLength(30)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Turnover)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-            });
-
+            
             modelBuilder.Entity<Users>(entity =>
             {
                 entity.Property(e => e.Id).HasColumnName("id");
