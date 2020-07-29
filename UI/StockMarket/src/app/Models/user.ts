@@ -1,8 +1,8 @@
 export class User {
-    username:string;
-    password:string;
-    userType:string;
-    email:string;
-    mobileNo:string;
-    confirmed:string;
+    UserName:string="";
+    Password:string="";
+    UserType:string="";
+    Email:string="";
+    MobileNo:string="";
+    Confirmed:string="";
 }

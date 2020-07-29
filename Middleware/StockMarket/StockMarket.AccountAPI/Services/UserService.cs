@@ -11,9 +11,9 @@ namespace StockMarket.AccountAPI.Services
     public class UserService:IUserService
     {
         UserRepository userRepo = new UserRepository();
-        public Users Login(string username,string password)
+        public Users Login(string email, string password)
         {
-            return userRepo.GetUserByNameAndPassword(username, password);
+            return userRepo.Login(email, password);
         }
 
         public List<Users> GetAllUsers()

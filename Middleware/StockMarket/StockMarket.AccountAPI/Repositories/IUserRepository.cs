@@ -13,7 +13,7 @@ namespace StockMarket.AccountAPI.Repositories
         void UpdateUser(Users user);
         List<Users> GetAllUser();
         Users GetUserById(int id);
-        Users GetUserByNameAndPassword(string username, string password);
+        Users Login(string email, string password);
         Users GetUserByEmail(string email);
     }
 }

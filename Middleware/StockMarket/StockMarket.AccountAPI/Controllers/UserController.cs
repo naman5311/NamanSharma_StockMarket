@@ -46,16 +46,17 @@ namespace StockMarket.AccountAPI.Controllers
             this.configuration = configuration;
         }
         [HttpGet]
-        [Route("Login/{username}/{password}")]
-        public IActionResult Login(string username,string password)
+        [Route("Login/{email}/{password}")]
+        public IActionResult Login(string email,string password)
         {
-            if (userService.Login(username, password) == null)
+            Users user = userService.Login(email, password);
+            if (user == null)
             {
-                return NotFound("Invalid User");
+                return NotFound("Invalid User Details");
             }
             else
             {
-                return Ok(GenerateJwtToken(username));
+                return Ok(GenerateJwtToken(user.UserName));
             }
         }
 
@@ -101,7 +102,7 @@ namespace StockMarket.AccountAPI.Controllers
         // PUT Update User
         [HttpPut]
         [Route("UpdateUser")]
-        [Authorize()]
+        //[Authorize()]
         public IActionResult UpdateUser(Users value)
         {
             userService.UpdateUser(value);
@@ -111,7 +112,7 @@ namespace StockMarket.AccountAPI.Controllers
         // DELETE Data
         [HttpDelete]
         [Route("DeleteUser/{id}")]
-        [Authorize()]
+        //[Authorize()]
         public IActionResult DeleteUser(int id)
         {
             userService.DeleteUser(id);

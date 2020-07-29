@@ -37,9 +37,9 @@ namespace StockMarket.AccountAPI.Repositories
             return db.Users.Find(id);
         }
 
-        public Users GetUserByNameAndPassword(string username,string password)
+        public Users Login(string email, string password)
         {
-            return db.Users.SingleOrDefault(e => e.UserName == username && e.Password==password);
+            return db.Users.SingleOrDefault(e => e.Email == email && e.Password==password);
         }
 
         public void UpdateUser(Users user)

@@ -15,22 +15,9 @@ namespace StockMarket.ExcelAPI.Repositories
     {
         private readonly IHostingEnvironment _hostingEnvironment;
         StockMarketDBContext _db = new StockMarketDBContext();
-
-        //public StockController(IHostingEnvironment hostingEnvironment, StockMarketDBContext db)
-        //{
-        //    //_hostingEnvironment = hostingEnvironment;
-        //    //_db = db;
-        //}
-
-
         
         public IList<StockPrice> ImportStockPrice(string filePath)
         {
-            
-
-            //  string rootFolder = _hostingEnvironment.WebRootPath;
-            // string fileName = @"ImportCustomers.xlsx";
-            //  FileInfo file = new FileInfo(Path.Combine(rootFolder, fileName));
 
             FileInfo file = new FileInfo(filePath);
             string fileName = file.Name;
@@ -42,7 +29,7 @@ namespace StockMarket.ExcelAPI.Repositories
                 List<StockPrice> stockPrices = new List<StockPrice>();
 
                 for (int i = 2; i <= totalRows; i++)
-                { double d;
+                { 
                     stockPrices.Add(new StockPrice
                     {
                         CompanyCode = workSheet.Cells[i, 1].Value.ToString(),
@@ -62,37 +49,7 @@ namespace StockMarket.ExcelAPI.Repositories
 
         
         public string ExportStockPrice(string filePath)
-        {
-            //string rootFolder = _hostingEnvironment.WebRootPath;
-            //string fileName = @"ExportCustomers.xlsx";
-
-            //FileInfo file = new FileInfo(Path.Combine(rootFolder, fileName));
-
-            //using (ExcelPackage package = new ExcelPackage(file))
-            //{
-
-            //    IList<Customers> customerList = _db.Customers.ToList();
-
-            //    ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("Customer");
-            //    int totalRows = customerList.Count();
-
-            //    worksheet.Cells[1, 1].Value = "Customer ID";
-            //    worksheet.Cells[1, 2].Value = "Customer Name";
-            //    worksheet.Cells[1, 3].Value = "Customer Email";
-            //    worksheet.Cells[1, 4].Value = "customer Country";
-            //    int i = 0;
-            //    for (int row = 2; row <= totalRows + 1; row++)
-            //    {
-            //        worksheet.Cells[row, 1].Value = customerList[i].CustomerId;
-            //        worksheet.Cells[row, 2].Value = customerList[i].CustomerName;
-            //        worksheet.Cells[row, 3].Value = customerList[i].CustomerEmail;
-            //        worksheet.Cells[row, 4].Value = customerList[i].CustomerCountry;
-            //        i++;
-            //    }
-
-            //    package.Save(); 
-
-            //}
+        { 
             FileInfo file = new FileInfo(filePath);
             string fileName = file.Name;
             using (ExcelPackage package = new ExcelPackage(file))

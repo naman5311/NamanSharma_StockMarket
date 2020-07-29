@@ -8,7 +8,7 @@ namespace StockMarket.AccountAPI.Services
 {
     interface IUserService
     {
-        public Users Login(string username, string password);
+        public Users Login(string email, string password);
         public List<Users> GetAllUsers();
         public Users GetUserById(int id);
         public void AddUser(Users user);
