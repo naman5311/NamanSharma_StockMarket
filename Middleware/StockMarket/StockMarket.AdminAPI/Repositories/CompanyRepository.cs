@@ -34,6 +34,7 @@ namespace StockMarket.AdminAPI.Repositories
         public void UpdateCompany(Company value)
         {
             db.Company.Update(value);
+            db.SaveChanges();
         }
     }
 }

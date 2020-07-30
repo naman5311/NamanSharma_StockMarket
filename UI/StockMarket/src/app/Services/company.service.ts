@@ -9,7 +9,7 @@ import { Company } from '../Models/company';
   providedIn: 'root'
 })
 export class CompanyService {
-
+editCompany:Company;
   constructor(private http:HttpClient) { }
 
   path=environment.adminPath;
@@ -18,19 +18,19 @@ export class CompanyService {
     return this.http.get<Company[]>(this.path+'/Company/GetAllCompany')
   }
 
-  public GetCompany(name:string):Observable<Company>{
-    return this.http.get<Company>(this.path+'/Company/GetCompany/'+name);
+  public GetCompany(name:string):Observable<any>{
+    return this.http.get<any>(this.path+'/Company/GetCompany/'+name);
   }
 
   public Register(user: Company):Observable<any> {
-    return this.http.post(this.path+`/AddUser`, user);
+    return this.http.post(this.path+`/Company/AddCompany`, user);
   }
 
   public Update(user: Company):Observable<any> {
-      return this.http.put(`/users/UpdateUser`, user);
+      return this.http.put(this.path+`/Company/UpdateCompany`, user);
   }
 
   public Delete(id: number):Observable<any> {
-      return this.http.delete(`/users/DeleteUser` + id);
+      return this.http.delete(this.path+`/Company/DeleteCompany/` + id);
   }
 }

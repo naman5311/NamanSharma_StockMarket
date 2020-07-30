@@ -22,7 +22,8 @@
                 <td>{{item.listedInSe}}</td>
                 <td>{{item.sector}}</td>
                 <td>{{item.stockCode}}</td>
-                <td><button (click)="onEdit()">Edit</button></td>
+                <td><button (click)="onEdit(item)">Edit</button></td>
+                <td><button (click)="onDelete(item.companyName)">Delete</button></td>
             </tr>
         </tbody>
         <button (click)="onAdd()">Add</button>

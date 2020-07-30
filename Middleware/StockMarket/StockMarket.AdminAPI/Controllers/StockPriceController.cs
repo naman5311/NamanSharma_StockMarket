@@ -13,7 +13,7 @@ namespace StockMarket.AdminAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize()]
+    //[Authorize()]
     public class StockPriceController : ControllerBase
     {
         StockPriceService stockService = new StockPriceService();

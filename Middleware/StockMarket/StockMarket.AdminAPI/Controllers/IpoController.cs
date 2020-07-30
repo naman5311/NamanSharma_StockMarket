@@ -13,7 +13,7 @@ namespace StockMarket.AdminAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize()]
+    //[Authorize()]
     public class IpoController : ControllerBase
     {
         IpoService ipoService = new IpoService();
@@ -63,16 +63,17 @@ namespace StockMarket.AdminAPI.Controllers
         // DELETE Data
         [HttpDelete]
         [Route("DeleteIpo/{id}")]
-        public IActionResult DeleteUser(int id)
+        public IActionResult DeleteUser(string id)
         {
-            ipoService.DeleteIpo(id);
+
+            ipoService.DeleteIpo(Int32.Parse(id));
             return Ok("Record Deleted");
         }
 
         // DELETE Data
         [HttpDelete]
-        [Route("DeleteIpo/{name}")]
-        public IActionResult DeleteUser(string name)
+        [Route("DeleteIpoByName/{name}")]
+        public IActionResult DeleteUserByName(string name)
         {
             ipoService.DeleteByName(name);
             return Ok("Record Deleted");

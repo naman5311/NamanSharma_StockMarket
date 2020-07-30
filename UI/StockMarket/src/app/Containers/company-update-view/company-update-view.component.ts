@@ -12,19 +12,21 @@ export class CompanyUpdateViewComponent implements OnInit {
   submitted=false;
   registerForm: FormGroup;
   company:Company;
-  company1:Company;
-    constructor(private formBuilder: FormBuilder,private service:CompanyService) { }
+  editCompany;
+    constructor(private formBuilder: FormBuilder,private service:CompanyService) {
+    }
   
     ngOnInit(): void {
-       //this.company1=this.service.GetCompany("R");
+       this.editCompany=JSON.parse(localStorage.getItem("editCompany"));
+       localStorage.removeItem("editCompany");
         this.registerForm = this.formBuilder.group({
-          companyName: ['', [Validators.required]],
-          turnover: ['', [Validators.required]],
-          ceo: ['', [Validators.required]],
-          boardOfDirectors: ['', [Validators.required]],
-          listedInSe: ['', [Validators.required]],
-          sector: ['', [Validators.required]],
-          stockCode: ['', [Validators.required]],
+          companyName: [this.editCompany.companyName, [Validators.required]],
+          turnover: [this.editCompany.turnover, [Validators.required]],
+          ceo: [this.editCompany.ceo, [Validators.required]],
+          boardOfDirectors: [this.editCompany.boardOfDirectors, [Validators.required]],
+          listedInSe: [this.editCompany.listedInSe, [Validators.required]],
+          sector: [this.editCompany.sector, [Validators.required]],
+          stockCode: [this.editCompany.stockCode, [Validators.required]],
 
       });
     }
@@ -46,6 +48,7 @@ export class CompanyUpdateViewComponent implements OnInit {
         this.company.ListedInSe=this.f.listedInSe.value;
         this.company.Sector=this.f.sector.value;
         this.company.StockCode=this.f.stockCode.value;
+        this.company.Brief="  ";
         this.service.Update(this.company).subscribe(i=>{
             console.log(i);
             
@@ -54,6 +57,6 @@ export class CompanyUpdateViewComponent implements OnInit {
             
           });
   
-        alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+        location.reload();
     }
 }

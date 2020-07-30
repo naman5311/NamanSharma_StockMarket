@@ -1,7 +1,7 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label>Company Name</label>
-        <input type="text" formControlName="companyName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.companyName.errors }" />
+        <input readonly type="text" formControlName="companyName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.companyName.errors }" />
         <div *ngIf="submitted && f.companyName.errors" class="invalid-feedback danger">
             <div *ngIf="f.companyName.errors.required">Company Name is required</div>
         </div>
@@ -15,7 +15,7 @@
     </div>
     <div class="form-group">
         <label>CEO</label>
-        <input type="password" formControlName="ceo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ceo.errors }" />
+        <input type="text" formControlName="ceo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ceo.errors }" />
         <div *ngIf="submitted && f.ceo.errors" class="invalid-feedback danger">
             <div *ngIf="f.ceo.errors.required">CEO is required</div>
         </div>

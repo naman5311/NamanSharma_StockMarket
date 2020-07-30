@@ -44,6 +44,7 @@ export class CompanyRegisterViewComponent implements OnInit {
         this.company.ListedInSe=this.f.listedInSe.value;
         this.company.Sector=this.f.sector.value;
         this.company.StockCode=this.f.stockCode.value;
+        this.company.Brief="  ";
         this.service.Register(this.company).subscribe(i=>{
             console.log(i);
             
@@ -52,6 +53,6 @@ export class CompanyRegisterViewComponent implements OnInit {
             
           });
   
-        alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+        location.reload();
     }
 }

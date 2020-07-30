@@ -18,6 +18,11 @@ import { ExchangeViewComponent } from './Containers/exchange-view/exchange-view.
 import { CompanyService } from './Services/company.service';
 import { CompanyRegisterViewComponent } from './Containers/company-register-view/company-register-view.component';
 import { CompanyUpdateViewComponent } from './Containers/company-update-view/company-update-view.component';
+import { ExchangeUpdateViewComponent } from './Containers/exchange-update-view/exchange-update-view.component';
+import { ExchangeRegisterViewComponent } from './Containers/exchange-register-view/exchange-register-view.component';
+import { IpoRegisterViewComponent } from './Containers/ipo-register-view/ipo-register-view.component';
+import { IpoUpdateViewComponent } from './Containers/ipo-update-view/ipo-update-view.component';
+import { IpoViewComponent } from './Containers/ipo-view/ipo-view.component';
 
 
 @NgModule({
@@ -32,6 +37,11 @@ import { CompanyUpdateViewComponent } from './Containers/company-update-view/com
     ExchangeViewComponent,
     CompanyRegisterViewComponent,
     CompanyUpdateViewComponent,
+    ExchangeUpdateViewComponent,
+    ExchangeRegisterViewComponent,
+    IpoRegisterViewComponent,
+    IpoUpdateViewComponent,
+    IpoViewComponent,
 
   ],
   imports: [

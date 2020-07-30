@@ -13,7 +13,7 @@ namespace StockMarket.AdminAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize()]
+    //[Authorize()]
     public class StockExchangeController : ControllerBase
     {
         StockExchangeService service = new StockExchangeService();
@@ -61,7 +61,7 @@ namespace StockMarket.AdminAPI.Controllers
         // DELETE StockExchange
         [HttpDelete]
         [Route("DeleteStockExchangeByName/{name}")]
-        public IActionResult DeleteStockExchange(string name)
+        public IActionResult DeleteStockExchangeByName(string name)
         {
             service.DeleteSEByName(name);
             return Ok("Record Deleted");
@@ -70,9 +70,9 @@ namespace StockMarket.AdminAPI.Controllers
         // DELETE StockExchange
         [HttpDelete]
         [Route("DeleteStockExchange/{id}")]
-        public IActionResult DeleteStockExchange(int id)
+        public IActionResult DeleteStockExchange(string id)
         {
-            service.DeleteSE(id);
+            service.DeleteSE(Int32.Parse(id));
             return Ok("Record Deleted");
         }
     }

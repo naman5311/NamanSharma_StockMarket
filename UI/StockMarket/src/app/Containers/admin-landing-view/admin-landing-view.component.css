@@ -10,14 +10,20 @@
   
   background: linear-gradient(to right, #0062e2, #5ebefd);
   width: 100%;
-  height: max-content+3rem;
+  height: max-content+8rem;
   display: flex;
   flex-direction: column;
  
 }
 .headers{
+    font-weight: 500;
     margin: 2rem;
-    color: rgb(204, 52, 25);
+    color: white;
+    background: linear-gradient(to right, #f113ee, #7d05d8);
+    border-radius: 5px;
+}
+.headers:hover{
+  transform: scale(1.05); 
 }
 .danger{
   color: red;
