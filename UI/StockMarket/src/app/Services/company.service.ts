@@ -1,25 +1,32 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs";
-import { User } from '../Models/user';
 import { environment } from 'src/environments/environment';
+import { Company } from '../Models/company';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class CompanyService {
 
   constructor(private http:HttpClient) { }
-  path:string=environment.path
-  public Login(email:string,password:string):Observable<any>{
-    return this.http.get<User[]>(this.path+"/Login/"+email+"/"+password);
+
+  path=environment.adminPath;
+
+  public GetAllCompany():Observable<Company[]>{
+    return this.http.get<Company[]>(this.path+'/Company/GetAllCompany')
   }
 
-  public Register(user: User):Observable<any> {
+  public GetCompany(name:string):Observable<Company>{
+    return this.http.get<Company>(this.path+'/Company/GetCompany/'+name);
+  }
+
+  public Register(user: Company):Observable<any> {
     return this.http.post(this.path+`/AddUser`, user);
   }
 
-  public Update(user: User):Observable<any> {
+  public Update(user: Company):Observable<any> {
       return this.http.put(`/users/UpdateUser`, user);
   }
 

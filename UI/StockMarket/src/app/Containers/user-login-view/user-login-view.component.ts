@@ -34,6 +34,8 @@ wrongCred=false;
       this.service.Login(this.f.email.value,this.f.password.value).subscribe(i=>{
           this.wrongCred=false;
             console.log(i);
+            localStorage.setItem('currentUser', JSON.stringify(i.uname));
+            localStorage.setItem('token', JSON.stringify(i.token));
 
       },
       error => {

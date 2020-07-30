@@ -1,1 +1,14 @@
-<p>admin-landing-view works!</p>
+<h1>Stock Market</h1>
+
+<body class="full-height">
+    <div class="row">
+        <span class="headers"><button (click)="onCompanyClick()">Inport Data</button></span>
+        <span class="headers"><button (click)="onCompanyClick()">Manage Company</button></span>
+        <span class="headers"><button (click)="onCompanyClick()">Manage Exchange</button></span>
+        <span class="headers"><button (click)="onCompanyClick()">Update IPO Details</button></span>
+        <div *ngIf="companyView"><app-company-view></app-company-view></div>
+        
+
+    </div>
+    
+</body>

@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-landing-view.component.css']
 })
 export class AdminLandingViewComponent implements OnInit {
+companyView=false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onCompanyClick(){
+    this.companyView=!this.companyView;
   }
 
 }

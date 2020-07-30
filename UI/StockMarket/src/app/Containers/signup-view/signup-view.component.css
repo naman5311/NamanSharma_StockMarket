@@ -14,3 +14,12 @@ body {
   .danger{
     color:red;
   }
+  .btn-signin{
+    width: 30rem;
+    
+  }
+  .btn-cancel{
+    width: 30rem;
+    background: rgb(241, 190, 95);
+    color: white;
+  }

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  path:""
+  path:"http://localhost:5001/api/User",
+  adminPath:"http://localhost:5002/api"
 };
 
 

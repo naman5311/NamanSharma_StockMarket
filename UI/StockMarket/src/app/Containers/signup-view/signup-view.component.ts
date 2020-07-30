@@ -32,6 +32,7 @@ user:User;
       if (this.registerForm.invalid) {
           return;
       }
+      this.user=new User();
       this.user.Email=this.f.email.value;
       this.user.Password=this.f.password.value;
       this.user.UserName=this.f.userName.value;
