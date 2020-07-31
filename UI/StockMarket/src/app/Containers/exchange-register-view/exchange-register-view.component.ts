@@ -16,14 +16,11 @@ export class ExchangeRegisterViewComponent implements OnInit {
   
     ngOnInit(): void {
       this.registerForm = this.formBuilder.group({
-        id: ['', [Validators.required]],
+        
         stockExchangeName: ['', [Validators.required]],
         brief: ['', [Validators.required]],
         contactAddress: ['', [Validators.required]],
         remarks: ['', [Validators.required]],
-        listedInSe: ['', [Validators.required]],
-        sector: ['', [Validators.required]],
-        stockCode: ['', [Validators.required]],
 
       });
     }
@@ -38,7 +35,6 @@ export class ExchangeRegisterViewComponent implements OnInit {
             return;
         }
         this.exchange=new Exchange();
-        this.exchange.Id=this.f.id.value;
         this.exchange.StockExchangeName=this.f.stockExchangeName.value;
         this.exchange.Brief=this.f.brief.value;
         this.exchange.ContactAddress=this.f.contactAddress.value;
@@ -48,9 +44,9 @@ export class ExchangeRegisterViewComponent implements OnInit {
             
           },
           error => {
-            
+            console.log(error);
           });
   
-        //location.reload();
+        location.reload();
     }
 }

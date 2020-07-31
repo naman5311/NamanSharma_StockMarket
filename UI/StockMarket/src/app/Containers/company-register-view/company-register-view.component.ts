@@ -50,7 +50,7 @@ export class CompanyRegisterViewComponent implements OnInit {
             
           },
           error => {
-            
+            console.log(error);
           });
   
         location.reload();

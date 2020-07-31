@@ -37,7 +37,10 @@ editCompanyClicked=false;
   onDelete(name){
     this.service.Delete(name).subscribe(i=>{
       console.log(i);
-    })
+    },
+    error => {
+      console.log(error);
+    });
     location.reload();
   }
 }

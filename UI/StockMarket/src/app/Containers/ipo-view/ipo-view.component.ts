@@ -36,8 +36,12 @@ export class IpoViewComponent implements OnInit {
     onDelete(id){
       this.service.Delete(id).subscribe(i=>{
         console.log(i);
-      })
-      //location.reload();
+      },
+      error => {
+        console.log(error);
+      });
+      
+      location.reload();
     }
   }
   

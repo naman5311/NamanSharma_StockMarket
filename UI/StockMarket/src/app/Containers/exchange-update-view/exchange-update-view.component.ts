@@ -25,9 +25,6 @@ export class ExchangeUpdateViewComponent implements OnInit {
           brief: [this.editExchange.brief, [Validators.required]],
           contactAddress: [this.editExchange.contactAddress, [Validators.required]],
           remarks: [this.editExchange.remarks, [Validators.required]],
-          listedInSe: [this.editExchange.listedInSe, [Validators.required]],
-          sector: [this.editExchange.sector, [Validators.required]],
-          stockCode: [this.editExchange.stockCode, [Validators.required]],
 
       });
     }
@@ -52,10 +49,10 @@ export class ExchangeUpdateViewComponent implements OnInit {
             
           },
           error => {
-            
+            console.log(error);
           });
   
-        //location.reload();
+        location.reload();
     }
 }
 

@@ -54,7 +54,7 @@ export class CompanyUpdateViewComponent implements OnInit {
             
           },
           error => {
-            
+            console.log(error);
           });
   
         location.reload();

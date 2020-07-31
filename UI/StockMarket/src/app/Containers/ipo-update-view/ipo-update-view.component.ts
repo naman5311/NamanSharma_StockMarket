@@ -27,7 +27,6 @@ export class IpoUpdateViewComponent implements OnInit {
           noOfShares: [this.editIpo.noOfShares, [Validators.required]],
           openDateTime: [this.editIpo.openDateTime, [Validators.required]],
           remarks: [this.editIpo.remarks, [Validators.required]],
-          stockCode: [this.editIpo.stockCode, [Validators.required]],
 
       });
     }
@@ -54,9 +53,9 @@ export class IpoUpdateViewComponent implements OnInit {
             
           },
           error => {
-            
+            console.log(error);
           });
   
-        //location.reload();
+          location.reload();
     }
 }
