@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Ipo } from 'src/app/Models/ipo';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { IpoService } from 'src/app/Services/ipo.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-ipo-register-view',

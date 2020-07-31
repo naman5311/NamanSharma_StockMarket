@@ -1,9 +1,9 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-        <label>Ipo Name</label>
-        <input type="text" formControlName="ipoName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ipoName.errors }" />
-        <div *ngIf="submitted && f.ipoName.errors" class="invalid-feedback danger">
-            <div *ngIf="f.ipoName.errors.required">Ipo Name is required</div>
+        <label>Company Name</label>
+        <input type="text" formControlName="companyName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.companyName.errors }" />
+        <div *ngIf="submitted && f.companyName.errors" class="invalid-feedback danger">
+            <div *ngIf="f.companyName.errors.required">Company Name is required</div>
         </div>
     </div>
     <div class="form-group">
@@ -49,7 +49,7 @@
         </div>
     </div>
     <div class="form-group">
-        <button class="btn btn-primary btn-lg btn-signin btn-block text-uppercase">Update</button>
+        <button class="btn btn-primary btn-lg btn-signin btn-block text-uppercase">Register</button>
     </div>
     
 </form>

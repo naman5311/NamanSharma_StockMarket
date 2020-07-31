@@ -150,11 +150,11 @@ namespace StockMarket.AdminAPI.Models
             modelBuilder.Entity<StockPrice>(entity =>
             {
                 entity.HasKey(e => e.StockId)
-                    .HasName("PK__StockPri__CBAD87635A89BF74");
+                    .HasName("PK__StockPri__CBAD8763CB9697DF");
 
                 entity.Property(e => e.StockId).HasColumnName("stockId");
 
-                entity.Property(e => e.CompanyName)
+                entity.Property(e => e.CompanyCode)
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
@@ -167,7 +167,10 @@ namespace StockMarket.AdminAPI.Models
                     .HasMaxLength(10)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Time).HasColumnType("time(0)");
+                entity.Property(e => e.Time)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Users>(entity =>
