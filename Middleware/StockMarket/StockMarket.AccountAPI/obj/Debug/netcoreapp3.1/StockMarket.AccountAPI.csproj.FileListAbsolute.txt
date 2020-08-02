@@ -118,9 +118,9 @@ C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\S
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AccountAPI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AccountAPI\bin\Debug\netcoreapp3.1\ExLogger\log4net.config
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AccountAPI\bin\Debug\netcoreapp3.1\log4net.dll
-C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AccountAPI\obj\Debug\netcoreapp3.1\StockMarket.AccountAPI.csproj.CoreCompileInputs.cache
-C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AccountAPI\obj\Debug\netcoreapp3.1\StockMarket.AccountAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AccountAPI\obj\Debug\netcoreapp3.1\StockMarket.AccountAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AccountAPI\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AccountAPI\bin\Debug\netcoreapp3.1\System.Web.Http.dll
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AccountAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AccountAPI\obj\Debug\netcoreapp3.1\StockMarket.AccountAPI.csproj.CoreCompileInputs.cache
+C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AccountAPI\obj\Debug\netcoreapp3.1\StockMarket.AccountAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AccountAPI\obj\Debug\netcoreapp3.1\StockMarket.AccountAPI.MvcApplicationPartsAssemblyInfo.cache

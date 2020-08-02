@@ -6,10 +6,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-landing-view.component.css']
 })
 export class UserLandingViewComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  compareCompanyView=false;
+  ipoView=false;
+  otherView=false;
+    constructor() { }
+  
+    ngOnInit(): void {
+    }
+  
+    onCompareCompanyClick(){
+      this.compareCompanyView=!this.compareCompanyView;
+      this.ipoView=false;
+      this.otherView=false;
+    }
+    
+    onIpoClick(){
+      this.ipoView=!this.ipoView;
+      this.compareCompanyView=false;
+      this.otherView=false;
+    }
+    onOtherClick(){
+      this.otherView=!this.otherView;
+      this.compareCompanyView=false;
+      this.ipoView=false;
+    }
+    
+  
   }
-
-}

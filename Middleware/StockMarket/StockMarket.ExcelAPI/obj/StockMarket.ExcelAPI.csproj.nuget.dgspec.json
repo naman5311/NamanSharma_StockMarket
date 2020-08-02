@@ -78,10 +78,6 @@
               "target": "Package",
               "version": "[5.5.1, )"
             },
-            "System.Data.OleDb": {
-              "target": "Package",
-              "version": "[4.7.1, )"
-            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.7.1, )"

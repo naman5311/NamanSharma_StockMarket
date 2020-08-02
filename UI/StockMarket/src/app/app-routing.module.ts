@@ -5,7 +5,6 @@ import { UserLoginViewComponent } from './Containers/user-login-view/user-login-
 import { SignupViewComponent } from './Containers/signup-view/signup-view.component';
 import { AdminLandingViewComponent } from './Containers/admin-landing-view/admin-landing-view.component';
 import { UserLandingViewComponent } from './Containers/user-landing-view/user-landing-view.component';
-import { CompanyViewComponent } from './Containers/company-view/company-view.component';
 
 
 const routes: Routes = [
@@ -13,8 +12,7 @@ const routes: Routes = [
   {path:'SignIn',component:UserLoginViewComponent},
   {path:'SignUp',component:SignupViewComponent},
   {path:'AdminLogin',component:AdminLandingViewComponent},
-  {path:'UserLogin',component:UserLandingViewComponent},
-  {path:'Company',component:CompanyViewComponent}
+  {path:'UserLogin',component:UserLandingViewComponent}
   
 ];
 

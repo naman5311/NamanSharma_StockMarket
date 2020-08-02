@@ -23,6 +23,10 @@ import { ExchangeRegisterViewComponent } from './Containers/exchange-register-vi
 import { IpoRegisterViewComponent } from './Containers/ipo-register-view/ipo-register-view.component';
 import { IpoUpdateViewComponent } from './Containers/ipo-update-view/ipo-update-view.component';
 import { IpoViewComponent } from './Containers/ipo-view/ipo-view.component';
+import { ImportDataViewComponent } from './Containers/import-data-view/import-data-view.component';
+import { CompareCompanyViewComponent } from './Containers/compare-company-view/compare-company-view.component';
+import { UserIpoViewComponent } from './Containers/user-ipo-view/user-ipo-view.component';
+import { UserOtherViewComponent } from './Containers/user-other-view/user-other-view.component';
 
 
 @NgModule({
@@ -42,6 +46,10 @@ import { IpoViewComponent } from './Containers/ipo-view/ipo-view.component';
     IpoRegisterViewComponent,
     IpoUpdateViewComponent,
     IpoViewComponent,
+    ImportDataViewComponent,
+    CompareCompanyViewComponent,
+    UserIpoViewComponent,
+    UserOtherViewComponent,
 
   ],
   imports: [
@@ -54,6 +62,6 @@ import { IpoViewComponent } from './Containers/ipo-view/ipo-view.component';
     
   ],
   providers: [UserService,CompanyService],
-  bootstrap: [AdminLandingViewComponent]
+  bootstrap: [UserLandingViewComponent]
 })
 export class AppModule { }
