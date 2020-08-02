@@ -9,15 +9,19 @@ import { Stockprice } from 'src/app/Models/stockprice';
   styleUrls: ['./compare-company-view.component.css']
 })
 export class CompareCompanyViewComponent implements OnInit {
-
+  graphView=false
+  name:string
   url = 'http://localhost:5003/api/StockPrice/GetStockPrices/';  
   data: Stockprice[];  
   Player = [];  
   Run = [];  
   Linechart = [];  
   constructor(private httpClient: HttpClient) { }  
-  ngOnInit() {  
-    this.httpClient.get(this.url+"Yes Bank").subscribe((result: Stockprice[]) => {  
+  ngOnInit() {  }
+  checkGraph(){
+    this.httpClient.get(this.url+this.name).subscribe((result: Stockprice[]) => {
+      this.Player=[];  
+      this.Run=[];  
       result.forEach(x => {  
         this.Player.push(x.date);  
         this.Run.push(x.currentPrice);  
@@ -49,6 +53,7 @@ export class CompareCompanyViewComponent implements OnInit {
           }  
         }  
       });  
-    });  
+    });
+    this.graphView=true  
   }  
 }
