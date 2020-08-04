@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/Services/user.service';
 import { throwError } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-login-view',
@@ -12,7 +13,10 @@ export class UserLoginViewComponent implements OnInit {
 submitted=false;
 registerForm: FormGroup;
 wrongCred=false;
-  constructor(private formBuilder: FormBuilder,private service:UserService) { }
+loginView=false;
+  constructor(private formBuilder: FormBuilder,private service:UserService,private router:Router) { 
+    this.loginView=true;
+  }
 
   ngOnInit(): void {
       this.registerForm = this.formBuilder.group({
@@ -42,7 +46,13 @@ wrongCred=false;
         this.wrongCred=true;
       });
 
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+      //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+      this.loginView=false;
+      this.router.navigateByUrl("/UserLanding");
+  }
+  onSignUpClick(){
+    this.loginView=false;
+    this.router.navigateByUrl("/UserLogin");
   }
 
 }

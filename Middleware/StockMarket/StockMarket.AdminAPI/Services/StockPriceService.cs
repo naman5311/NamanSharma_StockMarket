@@ -9,7 +9,13 @@ namespace StockMarket.AdminAPI.Services
 {
     public class StockPriceService : IStockPriceService
     {
-        StockPriceRepository stockRepo = new StockPriceRepository();
+        private IStockPriceRepository stockRepo;
+        public StockPriceService() { }
+        public StockPriceService(IStockPriceRepository _userRepo)
+        {
+            this.stockRepo = _userRepo;
+        }
+        //StockPriceRepository stockRepo = new StockPriceRepository();
         public void AddStockPrice(StockPrice value)
         {
             stockRepo.AddStockPrice(value);

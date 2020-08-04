@@ -16,7 +16,12 @@ namespace StockMarket.AdminAPI.Controllers
     //[Authorize()]
     public class CompanyController : ControllerBase
     {
-        CompanyService companyService = new CompanyService();
+        ICompanyService companyService;
+        public CompanyController(ICompanyService _service)
+        {
+            companyService = _service;
+        }
+        //CompanyService companyService = new CompanyService();
         // GET: api/<CompanyController>
         // GET All Users
         [HttpGet]

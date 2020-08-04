@@ -9,7 +9,13 @@ namespace StockMarket.AdminAPI.Services
 {
     public class StockExchangeService : IStockExchangeService
     {
-        StockExchangeRepository seRepo = new StockExchangeRepository();
+        private IStockExchangeRepository seRepo;
+        public StockExchangeService() { }
+        public StockExchangeService(IStockExchangeRepository _userRepo)
+        {
+            this.seRepo = _userRepo;
+        }
+        //StockExchangeRepository seRepo = new StockExchangeRepository();
         public void AddSE(StockExchange value)
         {
             seRepo.AddSE(value);

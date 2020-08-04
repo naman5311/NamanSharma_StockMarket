@@ -23,7 +23,13 @@ namespace StockMarket.AccountAPI.Controllers
     
     public class UserController : ControllerBase
     {
-        UserService userService = new UserService();
+        private readonly IUserService userService;
+        private readonly IConfiguration configuration;
+        public UserController(IUserService _service, IConfiguration configuration)
+        {
+            userService = _service;
+            this.configuration = configuration;
+        }
         // GET All Users
         [HttpGet]
         [Route("GetAllUsers")]
@@ -40,11 +46,11 @@ namespace StockMarket.AccountAPI.Controllers
             return Ok(userService.GetUserById(id));
         }
 
-        private readonly IConfiguration configuration;
+        /*private readonly IConfiguration configuration;
         public UserController(IConfiguration configuration)
         {
             this.configuration = configuration;
-        }
+        }*/
         [HttpGet]
         [Route("Login/{email}/{password}")]
         public IActionResult Login(string email,string password)

@@ -9,7 +9,14 @@ namespace StockMarket.AdminAPI.Services
 {
     public class CompanyService:ICompanyService
     {
-        CompanyRepository companyRepo = new CompanyRepository();
+        private ICompanyRepository companyRepo;
+        public CompanyService() { }
+        public CompanyService(ICompanyRepository _userRepo)
+        {
+            this.companyRepo = _userRepo;
+        }
+
+        //CompanyRepository companyRepo = new CompanyRepository();
 
         public void AddCompany(Company value)
         {

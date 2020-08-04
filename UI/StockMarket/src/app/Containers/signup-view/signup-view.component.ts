@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/Services/user.service';
 import { User } from 'src/app/Models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup-view',
@@ -12,7 +13,10 @@ export class SignupViewComponent implements OnInit {
   submitted=false;
 registerForm: FormGroup;
 user:User;
-  constructor(private formBuilder: FormBuilder,private service:UserService) { }
+signUpView=false
+  constructor(private formBuilder: FormBuilder,private service:UserService,private router:Router) { 
+    this.signUpView=true;
+  }
 
   ngOnInit(): void {
       this.registerForm = this.formBuilder.group({
@@ -46,8 +50,14 @@ user:User;
         error => {
           
         });
+        this.signUpView=false;
+      this.router.navigateByUrl("/");
 
       alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+  }
+  onCancelClick(){
+    this.signUpView=false;
+    this.router.navigateByUrl("/SignIn");
   }
 
 }

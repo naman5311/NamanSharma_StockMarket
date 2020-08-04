@@ -16,7 +16,12 @@ namespace StockMarket.AdminAPI.Controllers
     //[Authorize()]
     public class StockPriceController : ControllerBase
     {
-        StockPriceService stockService = new StockPriceService();
+        IStockPriceService stockService;
+        public StockPriceController(IStockPriceService _service)
+        {
+            stockService = _service;
+        }
+        //StockPriceService stockService = new StockPriceService();
         [HttpGet]
         [Route("GetAllStockPrice")]
         public IActionResult GetAllStockPrice()

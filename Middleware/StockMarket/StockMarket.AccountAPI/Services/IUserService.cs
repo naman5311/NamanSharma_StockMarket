@@ -6,7 +6,7 @@ using StockMarket.AccountAPI.Models;
 
 namespace StockMarket.AccountAPI.Services
 {
-    interface IUserService
+    public interface IUserService
     {
         public Users Login(string email, string password);
         public List<Users> GetAllUsers();

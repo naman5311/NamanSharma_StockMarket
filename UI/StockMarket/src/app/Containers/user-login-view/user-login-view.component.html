@@ -1,3 +1,4 @@
+<div *ngIf="loginView">
 <h1>Stock Market</h1>
 <body class="full-height">
   <div class="jumbotron">
@@ -29,7 +30,7 @@
                         <button class="btn btn-signin">Login</button>
                     </div>
                     <div>
-                      <a class="btn btn-signup" [routerLink]="['/signup-view']">Sign Up</a>
+                      <a class="btn btn-signup" (click)="onSignUpClick()">Sign Up</a>
                   </div>
                 </form>
             </div>
@@ -37,3 +38,5 @@
     </div>
 </div>
 </body>
+</div>
+<router-outlet></router-outlet>

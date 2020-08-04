@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StockMarket.AdminAPI.Services
 {
-    interface IStockExchangeService
+    public interface IStockExchangeService
     {
         public void AddSE(StockExchange value);
         public void DeleteSE(int id);

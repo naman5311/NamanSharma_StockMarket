@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StockMarket.AdminAPI.Services
 {
-    interface IStockPriceService
+    public interface IStockPriceService
     {
         public void AddStockPrice(StockPrice value);
         public void DeleteStockPrice(string name);

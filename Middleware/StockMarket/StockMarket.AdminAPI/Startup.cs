@@ -14,6 +14,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using StockMarket.AdminAPI.Repositories;
+using StockMarket.AdminAPI.Services;
 
 namespace StockMarket.AdminAPI
 {
@@ -29,6 +31,18 @@ namespace StockMarket.AdminAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IStockExchangeRepository, StockExchangeRepository>();
+            services.AddTransient<IStockExchangeService, StockExchangeService>();
+
+            services.AddTransient<IStockPriceRepository, StockPriceRepository>();
+            services.AddTransient<IStockPriceService, StockPriceService>();
+
+            services.AddTransient<IIpoRepository, IpoRepository>();
+            services.AddTransient<IIpoService, IpoService>();
+
+            services.AddTransient<ICompanyRepository, CompanyRepository>();
+            services.AddTransient<ICompanyService, CompanyService>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });

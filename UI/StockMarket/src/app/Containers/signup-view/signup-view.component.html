@@ -1,3 +1,4 @@
+<div>
 <h1>Stock Market</h1>
 <body>
     <div class="jumbotron">
@@ -39,10 +40,11 @@
                         <div class="form-group">
                             <button class="btn btn-primary btn-lg btn-signin btn-block text-uppercase">Register</button>
                         </div>
-                        <a class="btn btn-cancel" [routerLink]="['/user-login-view']">Cancel</a>
+                        <a class="btn btn-cancel" (click)="onCancelClick()">Cancel</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </body>
+</div>

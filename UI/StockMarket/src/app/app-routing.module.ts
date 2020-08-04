@@ -11,8 +11,8 @@ const routes: Routes = [
   
   {path:'SignIn',component:UserLoginViewComponent},
   {path:'SignUp',component:SignupViewComponent},
-  {path:'AdminLogin',component:AdminLandingViewComponent},
-  {path:'UserLogin',component:UserLandingViewComponent}
+  {path:'AdminLanding',component:AdminLandingViewComponent},
+  {path:'UserLanding',component:UserLandingViewComponent}
   
 ];
 

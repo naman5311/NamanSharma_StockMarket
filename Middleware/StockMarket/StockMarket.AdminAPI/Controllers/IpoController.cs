@@ -16,7 +16,12 @@ namespace StockMarket.AdminAPI.Controllers
     //[Authorize()]
     public class IpoController : ControllerBase
     {
-        IpoService ipoService = new IpoService();
+        IIpoService ipoService;
+        public IpoController(IIpoService _service)
+        {
+            ipoService = _service;
+        }
+        //IpoService ipoService = new IpoService();
         // GET All Ipo
         [HttpGet]
         [Route("GetAllIpo")]

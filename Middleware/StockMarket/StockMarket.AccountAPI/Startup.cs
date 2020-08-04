@@ -17,7 +17,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using StockMarket.AccountAPI.Models;
 using StockMarket.AccountAPI.Repositories;
+using StockMarket.AccountAPI.Services;
 
 namespace StockMarket.AccountAPI
 {
@@ -33,7 +35,9 @@ namespace StockMarket.AccountAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddDbContext<StockMarketDBContext>();
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IUserService, UserService>();
             //enable swagger
             services.AddSwaggerGen(c =>
             {

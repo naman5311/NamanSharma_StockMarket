@@ -62,6 +62,6 @@ import { UserOtherViewComponent } from './Containers/user-other-view/user-other-
     
   ],
   providers: [UserService,CompanyService],
-  bootstrap: [UserLandingViewComponent]
+  bootstrap: [UserLoginViewComponent]
 })
 export class AppModule { }

@@ -6,7 +6,7 @@ using StockMarket.AdminAPI.Models;
 
 namespace StockMarket.AdminAPI.Repositories
 {
-    interface IStockPriceRepository
+    public interface IStockPriceRepository
     {
         public void AddStockPrice(StockPrice value);
         public void DeleteStockPrice(string name);

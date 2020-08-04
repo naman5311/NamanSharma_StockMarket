@@ -9,7 +9,13 @@ namespace StockMarket.AdminAPI.Services
 {
     public class IpoService : IIpoService
     {
-        IpoRepository ipoRepo = new IpoRepository();
+        private IIpoRepository ipoRepo;
+        public IpoService() { }
+        public IpoService(IIpoRepository _userRepo)
+        {
+            this.ipoRepo = _userRepo;
+        }
+        //IpoRepository ipoRepo = new IpoRepository();
         public void AddIpo(Ipo value)
         {
             ipoRepo.AddIpo(value);

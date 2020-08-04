@@ -6,7 +6,7 @@ using StockMarket.AdminAPI.Models;
 
 namespace StockMarket.AdminAPI.Repositories
 {
-    interface IStockExchangeRepository
+    public interface IStockExchangeRepository
     {
         public void AddSE(StockExchange value);
         public void DeleteSE(int id);

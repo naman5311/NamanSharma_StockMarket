@@ -14,6 +14,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using StockMarket.UserAPI.Services;
+using StockMarket.UserAPI.Repositories;
 
 namespace StockMarket.UserAPI
 {
@@ -29,7 +31,9 @@ namespace StockMarket.UserAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            services.AddTransient<IStockPriceRepository, StockPriceRepository>();
+            services.AddTransient<IStockPriceService, StockPriceService>();
+
             //Cors for sharing data with HTTP methods
 
             services.AddCors(c =>

@@ -10,7 +10,14 @@ namespace StockMarket.AccountAPI.Services
 {
     public class UserService:IUserService
     {
-        UserRepository userRepo = new UserRepository();
+        //UserRepository userRepo = new UserRepository();
+        private IUserRepository userRepo;
+        public UserService() {}
+        public UserService(IUserRepository _userRepo)
+        {
+            this.userRepo = _userRepo;
+        }
+
         public Users Login(string email, string password)
         {
             return userRepo.Login(email, password);
