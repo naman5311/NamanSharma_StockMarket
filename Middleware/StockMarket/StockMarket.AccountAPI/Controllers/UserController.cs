@@ -62,11 +62,11 @@ namespace StockMarket.AccountAPI.Controllers
             }
             else
             {
-                return Ok(GenerateJwtToken(user.UserName));
+                return Ok(GenerateJwtToken(user.UserName,user.UserType));
             }
         }
 
-        private Token GenerateJwtToken(string uname)
+        private Token GenerateJwtToken(string uname,string userType)
         {
             var claims = new List<Claim>
             {
@@ -89,6 +89,7 @@ namespace StockMarket.AccountAPI.Controllers
 
             var response = new Token
             {
+                userType = userType,
                 uname = uname,
                 token = new JwtSecurityTokenHandler().WriteToken(token)
             };

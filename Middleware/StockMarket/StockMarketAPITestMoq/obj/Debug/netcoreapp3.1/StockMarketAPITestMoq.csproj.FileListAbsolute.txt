@@ -91,7 +91,6 @@ C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\S
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarketAPITestMoq\obj\Debug\netcoreapp3.1\StockMarketAPITestMoq.csproj.CopyComplete
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarketAPITestMoq\obj\Debug\netcoreapp3.1\StockMarketAPITestMoq.genruntimeconfig.cache
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarketAPITestMoq\obj\Debug\netcoreapp3.1\StockMarketAPITestMoq.csproj.CoreCompileInputs.cache
-C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarketAPITestMoq\bin\Debug\netcoreapp3.1\ExLogger\log4net.config
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarketAPITestMoq\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarketAPITestMoq\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarketAPITestMoq\bin\Debug\netcoreapp3.1\Properties\launchSettings.json

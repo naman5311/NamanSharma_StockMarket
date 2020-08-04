@@ -29,7 +29,7 @@ namespace StockMarket.AccountAPI.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+
             modelBuilder.Entity<Users>(entity =>
             {
                 entity.Property(e => e.Id).HasColumnName("id");

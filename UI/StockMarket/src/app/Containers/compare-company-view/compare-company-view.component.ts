@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';  
 import { Chart } from 'chart.js';  
-import { HttpClient } from '@angular/common/http';  
+import { HttpClient, HttpHeaders } from '@angular/common/http';  
 import { Stockprice } from 'src/app/Models/stockprice';
 
 @Component({
@@ -9,9 +9,13 @@ import { Stockprice } from 'src/app/Models/stockprice';
   styleUrls: ['./compare-company-view.component.css']
 })
 export class CompareCompanyViewComponent implements OnInit {
+  Requestheaders={headers:new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Authorization': "Bearer "+localStorage.getItem('token')
+  })}
   graphView=false
   name:string
-  url = 'http://localhost:5003/api/StockPrice/GetStockPrices/';  
+  url = 'http://localhost:5003/UserStockPrice/GetStockPrices/';  
   data: Stockprice[];  
   Player = [];  
   Run = [];  
@@ -19,7 +23,7 @@ export class CompareCompanyViewComponent implements OnInit {
   constructor(private httpClient: HttpClient) { }  
   ngOnInit() {  }
   checkGraph(){
-    this.httpClient.get(this.url+this.name).subscribe((result: Stockprice[]) => {
+    this.httpClient.get(this.url+this.name,this.Requestheaders).subscribe((result: Stockprice[]) => {
       this.Player=[];  
       this.Run=[];  
       result.forEach(x => {  

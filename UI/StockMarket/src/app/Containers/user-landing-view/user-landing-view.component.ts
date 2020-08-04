@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-landing-view',
@@ -9,7 +10,7 @@ export class UserLandingViewComponent implements OnInit {
   compareCompanyView=false;
   ipoView=false;
   otherView=false;
-    constructor() { }
+    constructor(private router:Router) { }
   
     ngOnInit(): void {
     }
@@ -30,6 +31,9 @@ export class UserLandingViewComponent implements OnInit {
       this.compareCompanyView=false;
       this.ipoView=false;
     }
-    
+    onLogOutClick(){
+      localStorage.clear();
+      this.router.navigateByUrl("/SignIn");
+    }
   
   }

@@ -7,7 +7,7 @@
 			"DownstreamHostAndPorts": [
 				{
 					"Host": "localhost",
-					"Port": 52869
+					"Port": 5001
 				}
 			],
 			"UpstreamPathTemplate": "/Item/{catchAll}"
@@ -20,7 +20,7 @@
 			"DownstreamHostAndPorts": [
 				{
 					"Host": "localhost",
-					"Port": 54804
+					"Port": 5002
 				}
 			],
 			"UpstreamPathTemplate": "/Order/{catchAll}"
@@ -32,7 +32,7 @@
 			"DownstreamHostAndPorts": [
 				{
 					"Host": "localhost",
-					"Port": 50493
+					"Port": 5004
 				}
 			],
 			"UpstreamPathTemplate": "/Login/{catchAll}"
@@ -40,6 +40,6 @@
 		}
 	],
 	"GlobalConfiguration": {
-		"BaseUrl": "http://localhost:55048"
+		"BaseUrl": "http://localhost:5003"
 	}
 }

@@ -22,7 +22,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "StockMarket.GateWay/1.0.0": {
+      "StockMarket.Gateway/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.9.10",
@@ -311,10 +311,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "StockMarket.GateWay.dll": {}
+          "StockMarket.Gateway.dll": {}
         },
         "compile": {
-          "StockMarket.GateWay.dll": {}
+          "StockMarket.Gateway.dll": {}
         }
       },
       "FluentValidation/8.5.0": {
@@ -2194,7 +2194,7 @@
     }
   },
   "libraries": {
-    "StockMarket.GateWay/1.0.0": {
+    "StockMarket.Gateway/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

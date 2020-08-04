@@ -7,6 +7,7 @@
             <span ><button class="headers" (click)="onCompanyClick()">Manage Company</button></span>
             <span ><button class="headers" (click)="onExchangeClick()">Manage Exchange</button></span>
             <span ><button class="headers" (click)="onIpoClick()">Update IPO Details</button></span>
+            <span ><button class="headers" (click)="onLogOutClick()">Logout</button></span>
         </div>
         <div class="row" *ngIf="companyView"><app-company-view></app-company-view></div>
         <div class="row" *ngIf="exchangeView"><app-exchange-view></app-exchange-view></div>

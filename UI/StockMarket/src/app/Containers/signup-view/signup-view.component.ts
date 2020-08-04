@@ -51,9 +51,9 @@ signUpView=false
           
         });
         this.signUpView=false;
-      this.router.navigateByUrl("/");
+      this.router.navigateByUrl("/SignIn");
 
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+     
   }
   onCancelClick(){
     this.signUpView=false;

@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+
+const Requestheaders={headers:new HttpHeaders({
+  'Content-Type': 'application/json',
+  'Authorization': "Bearer "+localStorage.getItem('token')
+})}
 
 @Injectable({
   providedIn: 'root'
 })
 export class UploadService {
-  path="http://localhost:5004";
+  path=environment.path;
   constructor(private http:HttpClient) { }
 
   public Upload(selectedFile: File) {
@@ -13,7 +19,7 @@ export class UploadService {
     fd.append('image',selectedFile,selectedFile.name);
     console.log("formfa0"+fd);
     
-    return this.http.post(this.path+`/UploadData`, fd);
+    return this.http.post(this.path+`/UploadData`, fd,Requestheaders);
   }
 }
 

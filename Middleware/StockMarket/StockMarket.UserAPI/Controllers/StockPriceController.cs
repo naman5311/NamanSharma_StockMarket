@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StockMarket.UserAPI.Models;
 using StockMarket.UserAPI.Services;
@@ -12,7 +13,7 @@ namespace StockMarket.UserAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize()]
+    [Authorize()]
     public class StockPriceController : ControllerBase
     {
         IStockPriceService stockService;

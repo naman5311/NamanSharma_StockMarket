@@ -13,7 +13,7 @@ namespace StockMarket.AdminAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize()]
+    [Authorize()]
     public class IpoController : ControllerBase
     {
         IIpoService ipoService;

@@ -78,16 +78,15 @@ namespace StockMarket.UserAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors("AllowOrigin");
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Stock Market V1");
             });
-            app.UseRouting();
-
-            app.UseAuthorization();
-            app.UseAuthentication();
+            app.UseCors("AllowOrigin");
 
             app.UseEndpoints(endpoints =>
             {

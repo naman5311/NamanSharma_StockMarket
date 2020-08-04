@@ -14,11 +14,13 @@ submitted=false;
 registerForm: FormGroup;
 wrongCred=false;
 loginView=false;
+
   constructor(private formBuilder: FormBuilder,private service:UserService,private router:Router) { 
     this.loginView=true;
   }
 
   ngOnInit(): void {
+      
       this.registerForm = this.formBuilder.group({
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required]]
@@ -38,21 +40,32 @@ loginView=false;
       this.service.Login(this.f.email.value,this.f.password.value).subscribe(i=>{
           this.wrongCred=false;
             console.log(i);
-            localStorage.setItem('currentUser', JSON.stringify(i.uname));
-            localStorage.setItem('token', JSON.stringify(i.token));
+            localStorage.setItem('currentUser', i.uname);
+            localStorage.setItem('token', i.token);
+            localStorage.setItem('userType',i.userType);
+            console.log("details "+i.userType+" token "+i.token);
+            this.loginView=false;
+            if(i.userType=="admin"){
+              this.loginView=false;
+              this.router.navigateByUrl("/AdminLanding");
+            }
+            else{
+              this.loginView=false;
+              localStorage.setItem('loginView','false')
+              this.router.navigateByUrl("/UserLanding");
+            }
 
       },
       error => {
         this.wrongCred=true;
       });
 
-      //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
-      this.loginView=false;
-      this.router.navigateByUrl("/UserLanding");
+      
+      
   }
   onSignUpClick(){
     this.loginView=false;
-    this.router.navigateByUrl("/UserLogin");
+    this.router.navigateByUrl("/SignUp");
   }
 
 }

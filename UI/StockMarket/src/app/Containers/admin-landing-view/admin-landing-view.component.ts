@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-landing-view',
@@ -11,7 +12,7 @@ companyView=false;
 exchangeView=false;
 ipoView=false;
 importView=false;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -39,6 +40,10 @@ importView=false;
     this.companyView=false;
     this.exchangeView=false;
     this.ipoView=false;
+  }
+  onLogOutClick(){
+    localStorage.clear();
+    this.router.navigateByUrl("/SignIn");
   }
   
 
