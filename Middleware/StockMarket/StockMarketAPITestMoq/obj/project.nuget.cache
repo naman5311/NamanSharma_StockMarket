@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3e4Bn7iUw7CCGRG8ICyDbRY9hg1uMJx/WJ0m5r5ch6yCQwiiY2GnQqW6AhwCrI/X+ty/pO5Yq/W8yqRP45DIug==",
+  "dgSpecHash": "11hnHONJfCrg2NNNx2Obx2Ppora5lOUaKu0mQMzuwwjm+Alak1tVvgM1hquQVh4YjM7MAAKdJObG6n/z8VTsRw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Naman\\Documents\\GitHub\\NamanSharma_StockMarket\\Middleware\\StockMarket\\StockMarketAPITestMoq\\StockMarketAPITestMoq.csproj",
   "expectedPackageFiles": [
@@ -50,6 +50,7 @@
     "C:\\Users\\Naman\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
     "C:\\Users\\Naman\\.nuget\\packages\\microsoft.testplatform.objectmodel\\16.5.0\\microsoft.testplatform.objectmodel.16.5.0.nupkg.sha512",
     "C:\\Users\\Naman\\.nuget\\packages\\microsoft.testplatform.testhost\\16.5.0\\microsoft.testplatform.testhost.16.5.0.nupkg.sha512",
+    "C:\\Users\\Naman\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\Naman\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Naman\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Naman\\.nuget\\packages\\moq\\4.14.5\\moq.4.14.5.nupkg.sha512",

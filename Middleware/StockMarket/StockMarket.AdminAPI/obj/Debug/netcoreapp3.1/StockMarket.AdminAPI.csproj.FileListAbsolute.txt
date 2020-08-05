@@ -82,6 +82,3 @@ C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\S
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AdminAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AdminAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AdminAPI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AdminAPI\obj\Debug\netcoreapp3.1\StockMarket.AdminAPI.csproj.CoreCompileInputs.cache
-C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AdminAPI\obj\Debug\netcoreapp3.1\StockMarket.AdminAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.AdminAPI\obj\Debug\netcoreapp3.1\StockMarket.AdminAPI.MvcApplicationPartsAssemblyInfo.cache

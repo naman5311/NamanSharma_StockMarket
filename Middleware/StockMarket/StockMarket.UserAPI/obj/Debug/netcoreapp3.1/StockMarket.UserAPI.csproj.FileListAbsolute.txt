@@ -82,6 +82,3 @@ C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\S
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.UserAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.UserAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.UserAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.UserAPI\obj\Debug\netcoreapp3.1\StockMarket.UserAPI.csproj.CoreCompileInputs.cache
-C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.UserAPI\obj\Debug\netcoreapp3.1\StockMarket.UserAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Naman\Documents\GitHub\NamanSharma_StockMarket\Middleware\StockMarket\StockMarket.UserAPI\obj\Debug\netcoreapp3.1\StockMarket.UserAPI.MvcApplicationPartsAssemblyInfo.cache

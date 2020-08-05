@@ -6,16 +6,16 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["StockMarket.Gateway/StockMarket.Gateway.csproj", "StockMarket.Gateway/"]
-RUN dotnet restore "StockMarket.Gateway/StockMarket.Gateway.csproj"
+COPY ["StockMarket.AdminAPI/StockMarket.AdminAPI.csproj", "StockMarket.AdminAPI/"]
+RUN dotnet restore "StockMarket.AdminAPI/StockMarket.AdminAPI.csproj"
 COPY . .
-WORKDIR "/src/StockMarket.Gateway"
-RUN dotnet build "StockMarket.Gateway.csproj" -c Release -o /app/build
+WORKDIR "/src/StockMarket.AdminAPI"
+RUN dotnet build "StockMarket.AdminAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "StockMarket.Gateway.csproj" -c Release -o /app/publish
+RUN dotnet publish "StockMarket.AdminAPI.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "StockMarket.Gateway.dll"]
+ENTRYPOINT ["dotnet", "StockMarket.AdminAPI.dll"]
