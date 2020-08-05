@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/Services/user.service';
 import { User } from 'src/app/Models/user';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-signup-view',
@@ -14,7 +15,7 @@ export class SignupViewComponent implements OnInit {
 registerForm: FormGroup;
 user:User;
 signUpView=false
-  constructor(private formBuilder: FormBuilder,private service:UserService,private router:Router) { 
+  constructor(private formBuilder: FormBuilder,private service:UserService,private router:Router,private toastr: ToastrService) { 
     this.signUpView=true;
   }
 
@@ -46,12 +47,11 @@ signUpView=false
       this.service.Register(this.user).subscribe(i=>{
           console.log(i);
           
-        },
-        error => {
-          
         });
+        this.toastr.success("User Registered.")
+          this.router.navigateByUrl("/SignIn");
         this.signUpView=false;
-      this.router.navigateByUrl("/SignIn");
+      
 
      
   }

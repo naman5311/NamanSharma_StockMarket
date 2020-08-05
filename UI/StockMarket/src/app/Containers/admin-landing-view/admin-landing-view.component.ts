@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin-landing-view',
@@ -12,7 +13,7 @@ companyView=false;
 exchangeView=false;
 ipoView=false;
 importView=false;
-  constructor(private router:Router) { }
+  constructor(private router:Router,private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -43,6 +44,7 @@ importView=false;
   }
   onLogOutClick(){
     localStorage.clear();
+    this.toastr.success("Logged Out successfully.")
     this.router.navigateByUrl("/SignIn");
   }
   

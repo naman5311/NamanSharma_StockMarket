@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Exchange } from 'src/app/Models/exchange';
 import { ExchangeService } from 'src/app/Services/exchange.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-exchange-view',
@@ -12,7 +13,7 @@ export class ExchangeViewComponent implements OnInit {
   item:Exchange;
   addExchangeClicked=false;
   editExchangeClicked=false;
-    constructor(private service:ExchangeService) { 
+    constructor(private service:ExchangeService,private toastr: ToastrService) { 
       this.service.GetAllExchange().subscribe(i=>{
         this.exchangeList=i;
         console.log(i);
@@ -36,11 +37,19 @@ export class ExchangeViewComponent implements OnInit {
     onDelete(id){
       this.service.Delete(id).subscribe(i=>{
         console.log(i);
+        this.toastr.success("Deleted Successfully.")
       },
       error => {
-        console.log(error);
+        
+        if(error.status==200){
+          this.toastr.success("Registered successfully.")
+        }
+        else{
+          console.log(error);
+          this.toastr.error("Failed To Register.")
+        }
       });
-      location.reload();
+      
     }
   }
   

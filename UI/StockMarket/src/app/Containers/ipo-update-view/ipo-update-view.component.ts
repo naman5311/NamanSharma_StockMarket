@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Ipo } from 'src/app/Models/ipo';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { IpoService } from 'src/app/Services/ipo.service';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ipo-update-view',
@@ -13,7 +15,8 @@ export class IpoUpdateViewComponent implements OnInit {
   registerForm: FormGroup;
   ipo:Ipo;
   editIpo;
-    constructor(private formBuilder: FormBuilder,private service:IpoService) {
+    constructor(private formBuilder: FormBuilder,private service:IpoService,private toastr: ToastrService,private router:Router
+      ) {
     }
   
     ngOnInit(): void {
@@ -53,9 +56,22 @@ export class IpoUpdateViewComponent implements OnInit {
             
           },
           error => {
-            console.log(error);
+            if(error.status==200){
+              this.toastr.success("Updated successfully.")
+            }
+            else{
+              console.log(error);
+              this.toastr.error("Failed To Update.")
+            }
           });
+          if(localStorage.getItem("userType")=="admin"){
+            this.router.navigateByUrl("/AdminLanding");
+          }
+          else{
+            this.router.navigateByUrl("/UserLanding");
+          }
+          this.toastr.success("Record Updated.")
   
-          location.reload();
+          
     }
 }

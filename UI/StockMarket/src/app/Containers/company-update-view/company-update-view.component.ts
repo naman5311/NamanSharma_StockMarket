@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Company } from 'src/app/Models/company';
 import { CompanyService } from 'src/app/Services/company.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-company-update-view',
@@ -13,7 +14,7 @@ export class CompanyUpdateViewComponent implements OnInit {
   registerForm: FormGroup;
   company:Company;
   editCompany;
-    constructor(private formBuilder: FormBuilder,private service:CompanyService) {
+    constructor(private formBuilder: FormBuilder,private service:CompanyService,private toastr: ToastrService) {
     }
   
     ngOnInit(): void {
@@ -51,12 +52,17 @@ export class CompanyUpdateViewComponent implements OnInit {
         this.company.Brief="  ";
         this.service.Update(this.company).subscribe(i=>{
             console.log(i);
-            
+            this.toastr.success("Updated successfully.")
           },
           error => {
-            console.log(error);
+            if(error.status==200){
+              this.toastr.success("Updated successfully.")
+            }
+            else{
+              console.log(error);
+              this.toastr.error("Failed To Update.")
+            }
           });
-  
-        location.reload();
+        
     }
 }

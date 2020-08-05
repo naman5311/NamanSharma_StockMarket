@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UploadService } from 'src/app/Services/upload.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-import-data-view',
@@ -8,7 +9,7 @@ import { UploadService } from 'src/app/Services/upload.service';
 })
 export class ImportDataViewComponent implements OnInit {
     selectedFile:File = null;
-    constructor(private service:UploadService) { }
+    constructor(private service:UploadService,private toastr: ToastrService) { }
   
     ngOnInit(): void {
         
@@ -20,6 +21,7 @@ export class ImportDataViewComponent implements OnInit {
     onUpload(){
       this.service.Upload(this.selectedFile).subscribe(i=>{
         console.log(i);
+        this.toastr.success("Uploaded Successfully.")
       },
       error => {
         console.log(error);

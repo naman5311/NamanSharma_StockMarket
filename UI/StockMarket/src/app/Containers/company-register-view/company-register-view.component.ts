@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Company } from 'src/app/Models/company';
 import { CompanyService } from 'src/app/Services/company.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-company-register-view',
@@ -12,7 +13,7 @@ export class CompanyRegisterViewComponent implements OnInit {
   submitted=false;
   registerForm: FormGroup;
   company:Company;
-    constructor(private formBuilder: FormBuilder,private service:CompanyService) { }
+    constructor(private formBuilder: FormBuilder,private service:CompanyService,private toastr: ToastrService) { }
   
     ngOnInit(): void {
         this.registerForm = this.formBuilder.group({
@@ -47,12 +48,18 @@ export class CompanyRegisterViewComponent implements OnInit {
         this.company.Brief="  ";
         this.service.Register(this.company).subscribe(i=>{
             console.log(i);
-            
+            this.toastr.success("Registered successfully.")
           },
           error => {
-            console.log(error);
+            if(error.status==200){
+              this.toastr.success("Registered successfully.")
+            }
+            else{
+              console.log(error);
+              this.toastr.error("Failed To Register.")
+            }
           });
   
-        location.reload();
+        
     }
 }

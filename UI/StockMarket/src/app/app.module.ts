@@ -27,6 +27,8 @@ import { ImportDataViewComponent } from './Containers/import-data-view/import-da
 import { CompareCompanyViewComponent } from './Containers/compare-company-view/compare-company-view.component';
 import { UserIpoViewComponent } from './Containers/user-ipo-view/user-ipo-view.component';
 import { UserOtherViewComponent } from './Containers/user-other-view/user-other-view.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -58,7 +60,10 @@ import { UserOtherViewComponent } from './Containers/user-other-view/user-other-
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    BrowserModule,
+	  BrowserAnimationsModule,
+	  ToastrModule.forRoot()
     
   ],
   providers: [UserService,CompanyService],

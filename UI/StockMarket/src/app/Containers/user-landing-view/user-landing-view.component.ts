@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-user-landing-view',
@@ -10,7 +11,7 @@ export class UserLandingViewComponent implements OnInit {
   compareCompanyView=false;
   ipoView=false;
   otherView=false;
-    constructor(private router:Router) { }
+    constructor(private router:Router,private toastr: ToastrService) { }
   
     ngOnInit(): void {
     }
@@ -33,6 +34,7 @@ export class UserLandingViewComponent implements OnInit {
     }
     onLogOutClick(){
       localStorage.clear();
+      this.toastr.success("Logged Out successfully.")
       this.router.navigateByUrl("/SignIn");
     }
   

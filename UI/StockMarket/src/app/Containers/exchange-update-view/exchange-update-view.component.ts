@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Exchange } from 'src/app/Models/exchange';
 import { ExchangeService } from 'src/app/Services/exchange.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-exchange-update-view',
@@ -13,7 +14,7 @@ export class ExchangeUpdateViewComponent implements OnInit {
   registerForm: FormGroup;
   exchange:Exchange;
   editExchange;
-    constructor(private formBuilder: FormBuilder,private service:ExchangeService) {
+    constructor(private formBuilder: FormBuilder,private service:ExchangeService,private toastr: ToastrService) {
     }
   
     ngOnInit(): void {
@@ -46,13 +47,19 @@ export class ExchangeUpdateViewComponent implements OnInit {
         this.exchange.Remarks=this.f.remarks.value;
         this.service.Update(this.exchange).subscribe(i=>{
             console.log(i);
-            
+            this.toastr.success("Updated successfully.")
           },
           error => {
-            console.log(error);
+            if(error.status==200){
+              this.toastr.success("Updated successfully.")
+            }
+            else{
+              console.log(error);
+              this.toastr.error("Failed To Update.")
+            }
           });
   
-        location.reload();
+        
     }
 }
 

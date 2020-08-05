@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Exchange } from 'src/app/Models/exchange';
 import { ExchangeService } from 'src/app/Services/exchange.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-exchange-register-view',
@@ -12,7 +13,7 @@ export class ExchangeRegisterViewComponent implements OnInit {
   submitted=false;
   registerForm: FormGroup;
   exchange:Exchange;
-    constructor(private formBuilder: FormBuilder,private service:ExchangeService) { }
+    constructor(private formBuilder: FormBuilder,private service:ExchangeService,private toastr: ToastrService) { }
   
     ngOnInit(): void {
       this.registerForm = this.formBuilder.group({
@@ -41,12 +42,18 @@ export class ExchangeRegisterViewComponent implements OnInit {
         this.exchange.Remarks=this.f.remarks.value;
         this.service.Register(this.exchange).subscribe(i=>{
             console.log(i);
-            
+            this.toastr.success("Registered Successfully.")
           },
           error => {
-            console.log(error);
+            if(error.status==200){
+              this.toastr.success("Registered successfully.")
+            }
+            else{
+              console.log(error);
+              this.toastr.error("Failed To Register.")
+            }
           });
   
-        location.reload();
+        
     }
 }

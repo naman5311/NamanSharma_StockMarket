@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/Services/user.service';
 import { throwError } from 'rxjs';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-user-login-view',
@@ -15,7 +16,7 @@ registerForm: FormGroup;
 wrongCred=false;
 loginView=false;
 
-  constructor(private formBuilder: FormBuilder,private service:UserService,private router:Router) { 
+  constructor(private formBuilder: FormBuilder,private service:UserService,private router:Router,private toastr: ToastrService) { 
     this.loginView=true;
   }
 
@@ -47,11 +48,13 @@ loginView=false;
             this.loginView=false;
             if(i.userType=="admin"){
               this.loginView=false;
+              this.toastr.success("Logged in as ADMIN.")
               this.router.navigateByUrl("/AdminLanding");
             }
             else{
               this.loginView=false;
-              localStorage.setItem('loginView','false')
+              
+              this.toastr.success("Logged in as USER.")
               this.router.navigateByUrl("/UserLanding");
             }
 
