@@ -1,8 +1,8 @@
 {
 	"ReRoutes": [
-		//Item
+		//User
 		{
-			"DownstreamPathTemplate": "/api/Item/{catchAll}",
+			"DownstreamPathTemplate": "/api/User/{catchAll}",
 			"DownstreamScheme": "http",
 			"DownstreamHostAndPorts": [
 				{
@@ -10,12 +10,12 @@
 					"Port": 5001
 				}
 			],
-			"UpstreamPathTemplate": "/Item/{catchAll}"
+			"UpstreamPathTemplate": "/User/{catchAll}"
 
 		},
-		// Order
+		// Admin
 		{
-			"DownstreamPathTemplate": "/api/Order/{catchAll}",
+			"DownstreamPathTemplate": "/api/Company/{catchAll}",
 			"DownstreamScheme": "http",
 			"DownstreamHostAndPorts": [
 				{
@@ -23,11 +23,48 @@
 					"Port": 5002
 				}
 			],
-			"UpstreamPathTemplate": "/Order/{catchAll}"
+			"UpstreamPathTemplate": "/Company/{catchAll}"
 
 		},
 		{
-			"DownstreamPathTemplate": "/api/Login/{catchAll}",
+			"DownstreamPathTemplate": "/api/Ipo/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 5002
+				}
+			],
+			"UpstreamPathTemplate": "/Ipo/{catchAll}"
+
+		},
+		{
+			"DownstreamPathTemplate": "/api/StockExchange/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 5002
+				}
+			],
+			"UpstreamPathTemplate": "/StockExchange/{catchAll}"
+
+		},
+		{
+			"DownstreamPathTemplate": "/api/StockPrice/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 5002
+				}
+			],
+			"UpstreamPathTemplate": "/StockPrice/{catchAll}"
+
+		},
+		//Excel
+		{
+			"DownstreamPathTemplate": "/api/Upload/{catchAll}",
 			"DownstreamScheme": "http",
 			"DownstreamHostAndPorts": [
 				{
@@ -35,7 +72,20 @@
 					"Port": 5004
 				}
 			],
-			"UpstreamPathTemplate": "/Login/{catchAll}"
+			"UpstreamPathTemplate": "/Upload/{catchAll}"
+
+		},
+		//User
+		{
+			"DownstreamPathTemplate": "/api/StockPrice/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 5005
+				}
+			],
+			"UpstreamPathTemplate": "/UserStockPrice/{catchAll}"
 
 		}
 	],
